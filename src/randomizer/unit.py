@@ -19,7 +19,7 @@ from bitarray import bitarray
 import struct
 import util
 import re
-from pointerAnalysis.capStr import *
+from capStr import *
 
 class FixedMetadata():
     class DIC:

@@ -3,7 +3,7 @@
 **MultiRandom** is a compiler-assisted function-level randomization scheme designed for Multi-Language ARM64 applications. It employs a lightweight compilation standardization strategy that allows for uniform. Further, it combines ARM64 architecture specifications and collected relocation types to accurately repair all ARM64 pointers after randomization. Benefiting from this design, MultiRandom can provide dependable function-level randomization for multi-language programs，to effectively counter against traditional Code Reuse Attacks as well as advanced Cross-Language Attacks.
 
 ### 2. How to build MultiRandom
-We provide docker/Dockerfile for building out the environment in a docker container, which will build the following three major components of MultiRando:
+We provide docker/Dockerfile for building out the environment in a docker container, you can execute `docker build -t multirandom .` to build it. MultiRandom mainly consists of the following three components:
 1. **Modified GAS.** We extend GAS to collect the auxiliary information during the translation of Assembly File -> Object File. This auxiliary information is stored in the .rand section of the Object File, which records the boundaries of each function, as well as the Code Pointers and Data Pointers.
 
 2. **Modified GOLD.** We extend GOLD to merge sub-metadata from each Object File into a whole as the Object Files are combined into an Executable.
