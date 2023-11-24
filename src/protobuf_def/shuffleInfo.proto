@@ -1,0 +1,131 @@
+syntax = "proto2";
+package ShuffleInfo;
+
+message ReorderInfo {
+
+  message BinaryInfo {
+    optional uint64 rand_obj_offset = 1;  // PLACEHOLDER FOR LINKER
+  }
+
+  message LayoutInfo {
+    optional uint32 bb_size = 1;        // All alignments between fn/bbl are included here
+                                          
+    optional uint32 type = 2;           // BBL|FUN|OBJ
+    optional bool   bb_fallthrough = 3;
+    optional uint32 section = 4;        // section identifier for c++ mutiple sections
+	  optional uint32 src_type = 5;       // [generalSource(=0) | hasInlineAssembly(=1) | standaloneAssembly(=2)]
+    optional string info = 6;
+  }
+
+
+
+  // Fixup info in ELF from LLVM
+  message FixupInfo {
+    message FixupTuple {
+      optional uint64 offset = 1;         
+      optional uint32 type = 2; //0-1base&2-3target->(Out|PC|VALUE|INDEX) 4->isRela 5->is_new_section 6->isJump 7->isRAND 8->isRELOC [16:31]->reloc_type
+	  							//0->is_new_section 1->isJump 2->isRAND 3->isRELOC [8:23]->reloc_type
+      optional uint64 base_bbl_sym = 3;
+      optional uint32 base_section = 4;
+      optional uint64 target_bbl_sym = 5;
+      optional uint32 target_section = 6;
+      optional uint32 section = 7;
+	    optional int64  add = 8;
+      optional uint32 step = 9;
+      optional string info = 10;
+    }
+    repeated FixupTuple text = 1;
+    repeated FixupTuple rodata = 2;
+    repeated FixupTuple data = 3;
+    repeated FixupTuple datarel = 4;
+    repeated FixupTuple initarray = 5;
+    repeated FixupTuple got = 6;
+    repeated FixupTuple init = 7;
+    repeated FixupTuple fini = 8;
+  }
+
+  // CCR's limitation
+  message CCRLimitation{
+    optional uint64 all_obj = 1;
+    optional uint64 hybrid_obj = 2;
+    optional uint64 static_got = 3;
+    optional uint64 silicon_errata = 4;
+    optional uint64 tls_opt = 5;
+    optional uint64 got_opt = 6;
+    optional uint64 got_target = 7;
+    optional uint64 tls_got_target = 8;
+    optional uint64 plt_target = 9;
+    optional uint64 merged_target = 10;
+    optional uint64 ifunc_target = 11;
+    repeated string missrandfile = 12;
+  }
+  
+  optional BinaryInfo bin = 1;
+  repeated LayoutInfo layout = 2;
+  repeated FixupInfo fixup = 3;
+  optional CCRLimitation ccr_limitation = 4;
+}
+
+
+message Metadata {
+
+  message InstInfo {
+    required uint32 offset = 1;
+    required uint32 size = 2;
+  }
+
+  message FunInfo {
+    // address
+    required uint32 section = 1;
+    required uint32 offset = 2;
+
+    // inst_list
+    repeated InstInfo insts = 3;
+
+    // other
+    optional string info = 4;
+  }
+
+  message FixupInfo {
+    // address
+    required uint64 offset = 1;     
+    required uint32 section = 2;    
+
+    // addressing mode
+    required uint32 type = 3; //0-1base->(Out|PC|VALUE|INDEX) 2-3target->(Out|PC|VALUE|INDEX) 4->isRela 5->is_new_section 6->isJump 7->isRAND 8->isRELOC 9->isGOT [16:31]->reloc_type
+    required uint64 base_bbl_sym = 4;
+    required uint32 base_section = 5;
+    required uint64 target_bbl_sym = 6;
+    required uint32 target_section = 7;
+	  optional int64  add = 8;
+    optional uint32 step = 9;
+
+    // other
+    optional string info = 10;
+  }
+
+  message GoldInfo{
+    optional uint64 all_obj = 1;
+    optional uint64 norand_obj = 2;
+
+    // fixup add
+    optional uint64 static_got = 3;
+    // fixup update
+    optional uint64 silicon_errata = 4;
+    optional uint64 tls_opt = 5;
+    optional uint64 got_opt = 6;
+    // fixup target update
+    optional uint64 got_target = 7;
+    optional uint64 tls_got_target = 8;
+    optional uint64 plt_target = 9;
+    optional uint64 merged_target = 10;
+    optional uint64 ifunc_target = 11;
+    repeated string missrandfile = 12;
+    optional uint64 c_fun = 13;
+  }
+
+  repeated FunInfo funs = 1;
+  repeated FixupInfo fixups = 2;
+  repeated FixupInfo otherfixups = 3;
+  optional GoldInfo goldinfo= 4;
+}

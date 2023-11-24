@@ -1,0 +1,74 @@
+2021-02-06  Nick Clifton  <nickc@redhat.com>
+
+	This is the 2.36.1 release.
+	* po/gold.pot: Regenerate.
+
+2021-01-28  H.J. Lu  <hongjiu.lu@intel.com>
+
+	PR gold/27246
+	* dwarf_reader.cc (Sized_dwarf_line_info::read_header_prolog):
+	Skip address size and segment selector for DWARF5.
+
+2021-01-24  Nick Clifton  <nickc@redhat.com>
+
+	This is the 2.36 release.
+	* po/gold.pot: Regenerate.
+
+2021-01-19  Alan Modra  <amodra@gmail.com>
+
+	PR 27203
+	* powerpc.cc (do_plt_fde_location): Remove doing_static_link
+	assertion.
+
+2021-01-18  H.J. Lu  <hongjiu.lu@intel.com>
+
+	* testsuite/ifuncmain6pie.c: Remove non-JUMP_SLOT relocations
+	against foo in ifuncmod6.so.
+	* testsuite/ifuncmod6.c: Likewise.
+
+2021-01-14  Nick Clifton  <nickc@redhat.com>
+
+	* po/fr.po: Updated French translation.
+
+2021-01-11  Nick Clifton  <nickc@redhat.com>
+
+	* po/sr.po: Updated Serbian translation.
+	* po/uk.po: Updated Ukranian translation.
+
+2021-01-09  Nick Clifton  <nickc@redhat.com>
+
+	* po/gold.pot: Regenerate.
+
+2021-01-09  Nick Clifton  <nickc@redhat.com>
+
+	* 2.36 release branch crated.
+
+2021-01-03  Alan Modra  <amodra@gmail.com>
+
+	PR 27140
+	* powerpc.cc (Target_powerpc::Branch_info::make_stub): Only access
+	object->st_other() when 64-bit.
+	(Stub_table::add_long_branch_entry): Ignore "other" when 32-bit.
+
+2021-01-01  Nicolas Boulenguez  <nicolas@debian.org>
+
+	* tilegx.cc: Correct comment spelling.
+
+2021-01-01  Alan Modra  <amodra@gmail.com>
+
+	Update year range in copyright notice of all files.
+
+For older changes see ChangeLog-2020
+
+Copyright (C) 2021 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Local Variables:
+mode: change-log
+left-margin: 8
+fill-column: 74
+version-control: never
+End:
