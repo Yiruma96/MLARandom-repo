@@ -1,0 +1,270 @@
+[workspace]
+members = [
+  "compiler/rustc",
+  "library/std",
+  "library/test",
+  "src/rustdoc-json-types",
+  "src/tools/cargotest",
+  "src/tools/clippy",
+  "src/tools/clippy/clippy_dev",
+  "src/tools/compiletest",
+  "src/tools/error_index_generator",
+  "src/tools/linkchecker",
+  "src/tools/lint-docs",
+  "src/tools/miropt-test-tools",
+  "src/tools/rustbook",
+  "src/tools/unstable-book-gen",
+  "src/tools/tidy",
+  "src/tools/tier-check",
+  "src/tools/build-manifest",
+  "src/tools/remote-test-client",
+  "src/tools/remote-test-server",
+  "src/tools/rust-installer",
+  "src/tools/rust-demangler",
+  "src/tools/cargo",
+  "src/tools/cargo/crates/credential/cargo-credential-1password",
+  "src/tools/cargo/crates/credential/cargo-credential-macos-keychain",
+  "src/tools/cargo/crates/credential/cargo-credential-wincred",
+  "src/tools/rustdoc",
+  "src/tools/rls",
+  "src/tools/rustfmt",
+  "src/tools/miri",
+  "src/tools/miri/cargo-miri",
+  "src/tools/rustdoc-themes",
+  "src/tools/unicode-table-generator",
+  "src/tools/expand-yaml-anchors",
+  "src/tools/jsondocck",
+  "src/tools/jsondoclint",
+  "src/tools/html-checker",
+  "src/tools/bump-stage0",
+  "src/tools/replace-version-placeholder",
+  "src/tools/lld-wrapper",
+  "src/tools/collect-license-metadata",
+  "src/tools/generate-copyright",
+]
+
+exclude = [
+  "build",
+  "compiler/rustc_codegen_cranelift",
+  "compiler/rustc_codegen_gcc",
+  "src/bootstrap",
+  "src/test/rustdoc-gui",
+  # HACK(eddyb) This hardcodes the fact that our CI uses `/checkout/obj`.
+  "obj",
+  # The `x` binary is a thin wrapper that calls `x.py`, which initializes
+  # submodules, before which workspace members cannot be invoked because
+  # not all `Cargo.toml` files are available, so we exclude the `x` binary,
+  # so it can be invoked before the current checkout is set up.
+  "src/tools/x",
+  # stdarch has its own Cargo workspace
+  "library/stdarch",
+]
+
+[profile.release.package.compiler_builtins]
+# The compiler-builtins crate cannot reference libcore, and it's own CI will
+# verify that this is the case. This requires, however, that the crate is built
+# without overflow checks and debug assertions. Forcefully disable debug
+# assertions and overflow checks here which should ensure that even if these
+# assertions are enabled for libstd we won't enable them for compiler_builtins
+# which should ensure we still link everything correctly.
+debug-assertions = false
+overflow-checks = false
+
+# For compiler-builtins we always use a high number of codegen units.
+# The goal here is to place every single intrinsic into its own object
+# file to avoid symbol clashes with the system libgcc if possible. Note
+# that this number doesn't actually produce this many object files, we
+# just don't create more than this number of object files.
+#
+# It's a bit of a bummer that we have to pass this here, unfortunately.
+# Ideally this would be specified through an env var to Cargo so Cargo
+# knows how many CGUs are for this specific crate, but for now
+# per-crate configuration isn't specifiable in the environment.
+codegen-units = 10000
+
+[profile.release.package.rustc-rayon-core]
+# The rustc fork of Rayon has deadlock detection code which intermittently
+# causes overflows in the CI (see https://github.com/rust-lang/rust/issues/90227)
+# so we turn overflow checks off for now.
+# FIXME: This workaround should be removed once #90227 is fixed.
+overflow-checks = false
+
+# These dependencies of the standard library implement symbolication for
+# backtraces on most platforms. Their debuginfo causes both linking to be slower
+# (more data to chew through) and binaries to be larger without really all that
+# much benefit. This section turns them all to down to have no debuginfo which
+# helps to improve link times a little bit.
+[profile.release.package]
+addr2line.debug = 0
+adler.debug = 0
+gimli.debug = 0
+miniz_oxide.debug = 0
+object.debug = 0
+
+
+
+
+
+
+[profile.release.package]
+rustc_ast.opt-level = 0
+rustc_ast.debug = 2
+rustc_codegen_ssa.opt-level = 0
+rustc_codegen_ssa.debug = 2
+rustc_driver.opt-level = 0
+rustc_driver.debug = 2
+rustc_codegen_llvm.opt-level = 0
+rustc_codegen_llvm.debug = 2
+rustc_llvm.opt-level = 0
+rustc_llvm.debug = 2
+rustc.opt-level = 0
+rustc.debug = 2
+
+rustc_serialize.opt-level = 0
+rustc_serialize.debug = 2
+rustc_data_structures.opt-level = 0
+rustc_data_structures.debug = 2
+rustc_hir_pretty.opt-level = 0
+rustc_hir_pretty.debug = 2
+rustc_privacy.opt-level = 0
+rustc_privacy.debug = 2
+rustc_mir_transform.opt-level = 0
+rustc_mir_transform.debug = 2
+
+#rustc_query_impl.opt-level = 0
+#rustc_query_impl.debug = 2
+#rustc_span.opt-level = 0
+#rustc_span.debug = 2
+#rustc_middle.opt-level = 0
+#rustc_middle.debug = 2
+
+#rustc_transmute.opt-level = 0
+#rustc_transmute.debug = 2
+#rustc_error_messages.opt-level = 0
+#rustc_error_messages.debug = 2
+#rustc_resolve.opt-level = 0
+#rustc_resolve.debug = 2
+
+#rustc_incremental.opt-level = 0
+#rustc_incremental.debug = 2
+#rustc_graphviz.opt-level = 0
+#rustc_graphviz.debug = 2
+#rustc_log.opt-level = 0
+#rustc_log.debug = 2
+#rustc_hir_analysis.opt-level = 0
+#rustc_hir_analysis.debug = 2
+#rustc_attr.opt-level = 0
+#rustc_attr.debug = 2
+#rustc_fs_util.opt-level = 0
+#rustc_fs_util.debug = 2
+#rustc_borrowck.opt-level = 0
+#rustc_borrowck.debug = 2
+#rustc_codegen_llvm.opt-level = 0
+#rustc_codegen_llvm.debug = 2
+#rustc_type_ir.opt-level = 0
+#rustc_type_ir.debug = 2
+#rustc_parse_format.opt-level = 0
+#rustc_parse_format.debug = 2
+#rustc_passes.opt-level = 0
+#rustc_passes.debug = 2
+#rustc_lexer.opt-level = 0
+#rustc_lexer.debug = 2
+#rustc_parse.opt-level = 0
+#rustc_parse.debug = 2
+#rustc_index.opt-level = 0
+#rustc_index.debug = 2
+#rustc_query_system.opt-level = 0
+#rustc_query_system.debug = 2
+#rustc_save_analysis.opt-level = 0
+#rustc_save_analysis.debug = 2
+#rustc_apfloat.opt-level = 0
+#rustc_apfloat.debug = 2
+#rustc_mir_dataflow.opt-level = 0
+#rustc_mir_dataflow.debug = 2
+#rustc_arena.opt-level = 0
+#rustc_arena.debug = 2
+#rustc_trait_selection.opt-level = 0
+#rustc_trait_selection.debug = 2
+#rustc_metadata.opt-level = 0
+#rustc_metadata.debug = 2
+#rustc_hir.opt-level = 0
+#rustc_hir.debug = 2
+#rustc_ast_passes.opt-level = 0
+#rustc_ast_passes.debug = 2
+#rustc_ty_utils.opt-level = 0
+#rustc_ty_utils.debug = 2
+#rustc_errors.opt-level = 0
+#rustc_errors.debug = 2
+
+#rustc_interface.opt-level = 0
+#rustc_interface.debug = 2
+#rustc_mir_build.opt-level = 0
+#rustc_mir_build.debug = 2
+#rustc_hir_typeck.opt-level = 0
+#rustc_hir_typeck.debug = 2
+#rustc_expand.opt-level = 0
+#rustc_expand.debug = 2
+#rustc_target.opt-level = 0
+#rustc_target.debug = 2
+
+#rustc_lint.opt-level = 0
+#rustc_lint.debug = 2
+#rustc_feature.opt-level = 0
+#rustc_feature.debug = 2
+#rustc_ast_lowering.opt-level = 0
+#rustc_ast_lowering.debug = 2
+#rustc_abi.opt-level = 0
+#rustc_abi.debug = 2
+#rustc_lint_defs.opt-level = 0
+#rustc_lint_defs.debug = 2
+#rustc_ast_pretty.opt-level = 0
+#rustc_ast_pretty.debug = 2
+
+#rustc_codegen_gcc.opt-level = 0
+#rustc_codegen_gcc.debug = 2
+#rustc_smir.opt-level = 0
+#rustc_smir.debug = 2
+#rustc_infer.opt-level = 0
+#rustc_infer.debug = 2
+#rustc_builtin_macros.opt-level = 0
+#rustc_builtin_macros.debug = 2
+#rustc_macros.opt-level = 0
+#rustc_macros.debug = 2
+#rustc_const_eval.opt-level = 0
+#rustc_const_eval.debug = 2
+#rustc_plugin_impl.opt-level = 0
+#rustc_plugin_impl.debug = 2
+#rustc_codegen_cranelift.opt-level = 0
+#rustc_codegen_cranelift.debug = 2
+#rustc_baked_icu_data.opt-level = 0
+#rustc_baked_icu_data.debug = 2
+#rustc_symbol_mangling.opt-level = 0
+#rustc_symbol_mangling.debug = 2
+#rustc_error_codes.opt-level = 0
+#rustc_error_codes.debug = 2
+
+#rustc_traits.opt-level = 0
+#rustc_traits.debug = 2
+#rustc_session.opt-level = 0
+#rustc_session.debug = 2
+#rustc_monomorphize.opt-level = 0
+#rustc_monomorphize.debug = 2
+
+
+
+
+
+
+[patch.crates-io]
+# See comments in `src/tools/rustc-workspace-hack/README.md` for what's going on
+# here
+rustc-workspace-hack = { path = 'src/tools/rustc-workspace-hack' }
+
+# See comments in `library/rustc-std-workspace-core/README.md` for what's going on
+# here
+rustc-std-workspace-core = { path = 'library/rustc-std-workspace-core' }
+rustc-std-workspace-alloc = { path = 'library/rustc-std-workspace-alloc' }
+rustc-std-workspace-std = { path = 'library/rustc-std-workspace-std' }
+
+[patch."https://github.com/rust-lang/rust-clippy"]
+clippy_lints = { path = "src/tools/clippy/clippy_lints" }

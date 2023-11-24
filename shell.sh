@@ -89,11 +89,10 @@ sudo make -j$(nproc)
 # Step 4. 选装myrust 1.67.0
 # cd /ccr/
 # proxychains git clone https://github.com/rust-lang/rust.git myrust67
-# proxychains git clone https://github.com/Yiruma96/myrust67.git myrust67-patch
 # cd myrust67
 # git checkout 1.67.0
 # proxychains git submodule update --init --recursive
-# cp -r ../myrust67-patch/* .
+# cp -r /ccr/src/myrust67-patch/* .
 # ./x.py build --stage 1 -j$(nproc)
 # if [ $ARCH = "x86-64" ]
 # then

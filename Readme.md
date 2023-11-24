@@ -1,34 +1,44 @@
 ## MultiRandom
-### Overview
-MultiRandom
+### 1. Overview
+**MultiRandom** is a compiler-assisted function-level randomization scheme designed for Multi-Language ARM64 applications. It employs a lightweight compilation standardization strategy that allows for uniform. Further, it combines ARM64 architecture specifications and collected relocation types to accurately repair all ARM64 pointers after randomization. Benefiting from this design, MultiRandom can provide dependable function-level randomization for multi-language programs，to effectively counter against traditional Code Reuse Attacks as well as advanced Cross-Language Attacks.
 
-### How to build MultiRandom
+### 2. How to build MultiRandom
+We provide docker/Dockerfile for building out the environment in a docker container, which will build the following three major components of MultiRando:
+1. **Modified GAS.** We extend GAS to collect the auxiliary information during the translation of Assembly File -> Object File. This auxiliary information is stored in the .rand section of the Object File, which records the boundaries of each function, as well as the Code Pointers and Data Pointers.
 
+2. **Modified GOLD.** We extend GOLD to merge sub-metadata from each Object File into a whole as the Object Files are combined into an Executable.
 
-### How to use MultiRandom
-```
+3. **Randomizer.** We implement a binary rewriter written in Python, called Randomizer. Randomizer can parse auxiliary information recorded in the Executable's .rand section and achieve dependable function-level randomization based on it.
+
+Additionally, MultiRandom incorporates a simple patch for the Rust backend, which permits users to choose between Rust's built-in assembler or the system's default assembler (/usr/bin/as) for emitting machine code. Our patch is currently tailored for Rust v-1.67.0 and is easily extensible to newer versions.
+
+### 3. How to use MultiRandom
+MultiRandom achieves compile-time metadata collection by replacing the system's default assembler and linker:
+```shell
 ln -s /usr/bin/as <MultiRandom_gas_path>
 ln -s /usr/bin/as <MultiRandom_gold_path>
 ```
 
-#### Compiling with GCC
+#### 3.1 Compiling with GCC
 ```shell
 gcc -O0 -o main main.c
 ```
 
-#### Compiling with LLVM
+#### 3.2 Compiling with LLVM
+LLVM by default uses its built-in assembly component to accomplish the backend task. You need to add the `-fno-integrated-as` compile option to instruct LLVM to use the system's default assembler.
 ```shell
-clang --fno-integreted-as -O0 -o main main.c
+clang -fno-integrated-as -O0 -o main main.c
 ```
 
-#### Compiling with Rust
+#### 3.3 Compiling with Rust
+Rust does not provide the compile option like LLVM to choose the assembler used by the backend. You need to compile the target project with our patched Rust-v.1.67.0.
 ```shell
 rustup toolchain link myrust67 <rust_project_path>
 cd <project_path>
 cargo build
 ```
 
-#### Reading Metadata
+#### 3.4 Reading Metadata
 ```shell
 python3.10 /ccr/randomizer/shuffleInfoReader.py <elf_path>
 ```
@@ -56,7 +66,7 @@ Fixup#   3 VA:0x176cdc, Offset:0x769dc, Reloc:R_AARCH64_CALL26, Target:Unknown-0
 ...
 ```
 
-#### Binary Rewritting using randomizer
+#### 3.5 Binary Rewritting using Randomizer
 ```shell
 python3.10 /ccr/randomizer/prander.py <elf_path>
 ```
@@ -125,8 +135,3 @@ Step4. 统计信息如下 (reorderEngine.py:484)
 	Processing section [.shstrtab] (binaryBuilder.py:683)
 随机化结束，消耗时间为 45.667 sec(s) (prander.py:136)
 ```
-
-
-
-
-
