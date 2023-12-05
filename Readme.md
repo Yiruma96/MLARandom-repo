@@ -15,8 +15,8 @@ Additionally, MultiRandom incorporates a simple patch for the Rust backend, whic
 ### 3. How to use MultiRandom
 MultiRandom achieves compile-time metadata collection by replacing the system's default assembler and linker:
 ```shell
-ln -s /usr/bin/as <MultiRandom_gas_path>
-ln -s /usr/bin/as <MultiRandom_gold_path>
+ln -s <MultiRandom_gas_path> /usr/bin/as
+ln -s <MultiRandom_gold_path> /usr/bin/ld
 ```
 
 #### 3.1 Compiling with GCC
