@@ -1,4 +1,5 @@
 ## MLARandom
+
 ### 1. Overview
 **MLARandom** is a compiler-assisted function-level randomization scheme designed for Multi-Language ARM64 applications. It employs a lightweight compilation standardization strategy that allows for uniform. Further, it combines ARM64 architecture specifications and collected relocation types to accurately repair all ARM64 pointers after randomization. Benefiting from this design, MLARandom can provide dependable function-level randomization for multi-language programs，to effectively counter against traditional Code Reuse Attacks as well as advanced Cross-Language Attacks.
 
@@ -135,3 +136,6 @@ Step4. 统计信息如下 (reorderEngine.py:484)
 	Processing section [.shstrtab] (binaryBuilder.py:683)
 随机化结束，消耗时间为 45.667 sec(s) (prander.py:136)
 ```
+
+### 仓库地址
+本项目基于Binutils开发，项目位于https://ftp.gnu.org/gnu/binutils/，非官方fork仓库位于https://github.com/bminor/binutils-gdb
