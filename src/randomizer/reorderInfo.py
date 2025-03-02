@@ -177,7 +177,9 @@ class Fixups():
 
         def getSectionData(secIdx):
             if secIdx not in self.secData:
-                self.secData[secIdx] = self.elfParser.elf.get_section_by_name(self.elfParser.section_name[secIdx]).data()
+                # self.secData[secIdx] = self.elfParser.elf.get_section_by_name(self.elfParser.section_name[secIdx]).data()
+                # 原本使用的get_section_by_name，但直到我看到了同名的.init_array出现在ELF中，所以还是使用section idx作为key吧
+                self.secData[secIdx] = self.elfParser.elf.get_section(secIdx).data()
             return self.secData[secIdx]
 
         def extractPointerBitSeq(FI, sectionData):
