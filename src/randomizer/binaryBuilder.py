@@ -359,6 +359,7 @@ class BinaryBuilder():
         assert (len(sectionChunk) % reloc.num_relocations() == 0)
 
         bars = util.ProgressBar(reloc.data_size / reloc.entry_size)
+        pos = 0
         for rel in reloc.iter_relocations():
             bars += 1
             offset, addend, type, sym = _get_reloc_entries(rel)
@@ -375,7 +376,13 @@ class BinaryBuilder():
             if (self.options.arch == C.ARM64 and type in [1027, 1032]) or (self.options.arch == C.X64 and type in [8, 37, 38]):
                 addend = self.getNewValue(addend)
             self.writePointer(value=addend, size=64, tag=1)
+
+            # 更新pos
+            pos += 24
         bars.finish()
+
+        # 看到cangjie应该是对plt节有填充的，所以重定位节并不一定严格是24的倍数
+        self.writeFile(sectionChunk[pos:])
 
 
     def patchSymbolTable(self, secName, sectionChunk):
