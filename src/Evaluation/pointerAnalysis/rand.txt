@@ -1,0 +1,230 @@
+
+Fun#0 <>: VA=0x4005d0 section_idx=.text
+
+Fun#1 <np-temp  .text  in  /lib/aarch64-linux-gnu/crt1.o>: VA=0x400670 section_idx=.text
+Fun#2 <np-temp  .text  in  /lib/aarch64-linux-gnu/crti.o>: VA=0x4006b4 section_idx=.text
+Fun#3 <np-temp  .text  in  /usr/local/gcc7-arm64-release-ccr/lib/gcc/aarch64-linux-gnu/7.3.0/crtbegin.o>: VA=0x4006c8 section_idx=.text
+Fun#4 <>: VA=0x400770 section_idx=.text
+
+Fun#5 <>: VA=0x4009f0 section_idx=.text
+
+Fun#6 <>: VA=0x400a30 section_idx=.text
+
+Fun#7 <>: VA=0x400a70 section_idx=.text
+
+Fun#8 <>: VA=0x400ba8 section_idx=.text
+
+Fun#9 <>: VA=0x400d00 section_idx=.text
+
+Fun#10 <>: VA=0x400d28 section_idx=.text
+
+Fun#11 <>: VA=0x400d40 section_idx=.text
+
+Fun#12 <>: VA=0x400d58 section_idx=.text
+
+Fun#13 <>: VA=0x400d80 section_idx=.text
+
+Fun#14 <>: VA=0x400da8 section_idx=.text
+
+Fun#15 <>: VA=0x400dd8 section_idx=.text
+
+
+
+
+>>> Fixups: 151
+Fixup#   0 VA:0x400774, Offset:0x01a4, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400f00(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   1 VA:0x400778, Offset:0x01a8, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400f00(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   2 VA:0x40078c, Offset:0x01bc, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400598(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   3 VA:0x400798, Offset:0x01c8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400f30(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   4 VA:0x40079c, Offset:0x01cc, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400f30(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   5 VA:0x4007a0, Offset:0x01d0, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   6 VA:0x4007a8, Offset:0x01d8, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4009f0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   7 VA:0x4007ac, Offset:0x01dc, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400f48(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   8 VA:0x4007b0, Offset:0x01e0, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400f48(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#   9 VA:0x4007b4, Offset:0x01e4, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  10 VA:0x4007bc, Offset:0x01ec, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x4009a8(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  11 VA:0x4007c8, Offset:0x01f8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400f68(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  12 VA:0x4007d0, Offset:0x0200, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400f68(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  13 VA:0x4007e4, Offset:0x0214, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x4007f0(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  14 VA:0x4007ec, Offset:0x021c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400820(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  15 VA:0x4007f0, Offset:0x0220, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400d00(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  16 VA:0x40080c, Offset:0x023c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x4007e8(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  17 VA:0x400814, Offset:0x0244, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  18 VA:0x40081c, Offset:0x024c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x4007f0(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  19 VA:0x400824, Offset:0x0254, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4009f0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  20 VA:0x40082c, Offset:0x025c, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400fb8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  21 VA:0x400834, Offset:0x0264, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400fb8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  22 VA:0x400838, Offset:0x0268, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  23 VA:0x40083c, Offset:0x026c, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400f70(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  24 VA:0x400848, Offset:0x0278, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ed8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  25 VA:0x400850, Offset:0x0280, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400f70(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  26 VA:0x400854, Offset:0x0284, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x400860(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  27 VA:0x40085c, Offset:0x028c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x4008a4(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  28 VA:0x400860, Offset:0x0290, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400d00(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  29 VA:0x40087c, Offset:0x02ac, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400858(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  30 VA:0x400880, Offset:0x02b0, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ed8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  31 VA:0x400898, Offset:0x02c8, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  32 VA:0x4008a0, Offset:0x02d0, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400860(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  33 VA:0x4008ac, Offset:0x02dc, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4009f0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  34 VA:0x4008b0, Offset:0x02e0, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400f90(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  35 VA:0x4008b4, Offset:0x02e4, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400fe0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  36 VA:0x4008bc, Offset:0x02ec, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400fe0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  37 VA:0x4008c4, Offset:0x02f4, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ed8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  38 VA:0x4008c8, Offset:0x02f8, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  39 VA:0x4008cc, Offset:0x02fc, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400f90(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  40 VA:0x4008d0, Offset:0x0300, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x4008e0(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  41 VA:0x4008dc, Offset:0x030c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400920(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  42 VA:0x4008e0, Offset:0x0310, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400d28(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  43 VA:0x4008fc, Offset:0x032c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x4008d8(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  44 VA:0x400904, Offset:0x0334, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ed8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  45 VA:0x400914, Offset:0x0344, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  46 VA:0x40091c, Offset:0x034c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x4008e0(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  47 VA:0x400928, Offset:0x0358, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4009f0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  48 VA:0x40092c, Offset:0x035c, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400fb0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  49 VA:0x400930, Offset:0x0360, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x401000(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  50 VA:0x400938, Offset:0x0368, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x401000(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  51 VA:0x400940, Offset:0x0370, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  52 VA:0x400944, Offset:0x0374, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400fb0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  53 VA:0x400948, Offset:0x0378, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x400958(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  54 VA:0x400954, Offset:0x0384, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x40098c(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  55 VA:0x400958, Offset:0x0388, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400d28(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  56 VA:0x400974, Offset:0x03a4, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400950(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  57 VA:0x400980, Offset:0x03b0, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  58 VA:0x400988, Offset:0x03b8, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400958(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  59 VA:0x4009ac, Offset:0x03dc, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4009f0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  60 VA:0x4009b4, Offset:0x03e4, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400fb8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  61 VA:0x4009b8, Offset:0x03e8, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400fb8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  62 VA:0x4009bc, Offset:0x03ec, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  63 VA:0x4009c4, Offset:0x03f4, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4009f0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  64 VA:0x4009c8, Offset:0x03f8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400fe0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  65 VA:0x4009cc, Offset:0x03fc, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400fe0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  66 VA:0x4009d0, Offset:0x0400, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  67 VA:0x4009d8, Offset:0x0408, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4009f0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  68 VA:0x4009e0, Offset:0x0410, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x401000(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  69 VA:0x4009e8, Offset:0x0418, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x401000(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  70 VA:0x4009ec, Offset:0x041c, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x4005a8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  71 VA:0x4005dc, Offset:0x000c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400650(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  72 VA:0x4005f4, Offset:0x0024, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005b8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  73 VA:0x400608, Offset:0x0038, Reloc:R_AARCH64_CALL26, Target:Unknown-0x4005b8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  74 VA:0x400624, Offset:0x0054, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400770(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  75 VA:0x40063c, Offset:0x006c, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400770(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  76 VA:0x400650, Offset:0x0080, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x401030(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  77 VA:0x400654, Offset:0x0084, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x401030(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  78 VA:0x400658, Offset:0x0088, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400598(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  79 VA:0x400660, Offset:0x0090, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x400648(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  80 VA:0x4009f0, Offset:0x0420, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  81 VA:0x4009f8, Offset:0x0428, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  82 VA:0x400a00, Offset:0x0430, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  83 VA:0x400a20, Offset:0x0450, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400a0c(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  84 VA:0x400a24, Offset:0x0454, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  85 VA:0x400a28, Offset:0x0458, Reloc:R_AARCH64_LDST32_ABS_LO12_NC, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  86 VA:0x400a30, Offset:0x0460, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  87 VA:0x400a38, Offset:0x0468, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  88 VA:0x400a40, Offset:0x0470, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  89 VA:0x400a60, Offset:0x0490, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400a4c(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  90 VA:0x400a64, Offset:0x0494, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  91 VA:0x400a68, Offset:0x0498, Reloc:R_AARCH64_LDST32_ABS_LO12_NC, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  92 VA:0x400a70, Offset:0x04a0, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  93 VA:0x400a80, Offset:0x04b0, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  94 VA:0x400a88, Offset:0x04b8, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  95 VA:0x400aa8, Offset:0x04d8, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400a94(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup#  96 VA:0x400aac, Offset:0x04dc, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  97 VA:0x400abc, Offset:0x04ec, Reloc:R_AARCH64_LDST32_ABS_LO12_NC, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  98 VA:0x400ac0, Offset:0x04f0, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup#  99 VA:0x400ad4, Offset:0x0504, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x400aec(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 100 VA:0x400ae8, Offset:0x0518, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400b40(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 101 VA:0x400b24, Offset:0x0554, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400ad8(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 102 VA:0x400b3c, Offset:0x056c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400aec(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 103 VA:0x400b44, Offset:0x0574, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 104 VA:0x400b50, Offset:0x0580, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x400b5c(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 105 VA:0x400b80, Offset:0x05b0, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400b90(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 106 VA:0x400b98, Offset:0x05c8, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400b58(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 107 VA:0x400ba0, Offset:0x05d0, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 108 VA:0x400ba8, Offset:0x05d8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 109 VA:0x400bac, Offset:0x05dc, Reloc:R_AARCH64_LDST32_ABS_LO12_NC, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 110 VA:0x400bb4, Offset:0x05e4, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400cb4(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 111 VA:0x400bb8, Offset:0x05e8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 112 VA:0x400bc0, Offset:0x05f0, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400cc8(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 113 VA:0x400bc4, Offset:0x05f4, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 114 VA:0x400bc8, Offset:0x05f8, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 115 VA:0x400bcc, Offset:0x05fc, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x401050(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 116 VA:0x400bdc, Offset:0x060c, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x401050(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 117 VA:0x400c0c, Offset:0x063c, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400be0(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 118 VA:0x400c10, Offset:0x0640, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 119 VA:0x400c18, Offset:0x0648, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x401050(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 120 VA:0x400c50, Offset:0x0680, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400c20(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 121 VA:0x400c54, Offset:0x0684, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 122 VA:0x400c58, Offset:0x0688, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 123 VA:0x400c9c, Offset:0x06cc, Reloc:R_AARCH64_LDST32_ABS_LO12_NC, Target:Unknown-0x420040(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 124 VA:0x400cb4, Offset:0x06e4, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 125 VA:0x400cb8, Offset:0x06e8, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 126 VA:0x400cc4, Offset:0x06f4, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x400c88(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 127 VA:0x400cd0, Offset:0x0700, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 128 VA:0x400cd8, Offset:0x0708, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x420060(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 129 VA:0x400cf8, Offset:0x0728, Reloc:R_AARCH64_CONDBR19, Target:Unknown-0x400ce4(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 130 VA:0x400cfc, Offset:0x072c, Reloc:R_AARCH64_JUMP26, Target:Unknown-0x400bc4(VALUE), add:0x0000 (@Sec .text) (RAND)1
+Fixup# 131 VA:0x400d08, Offset:0x0738, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 132 VA:0x400d10, Offset:0x0740, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ee0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 133 VA:0x400d18, Offset:0x0748, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ee0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 134 VA:0x400d30, Offset:0x0760, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 135 VA:0x400d48, Offset:0x0778, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 136 VA:0x400d60, Offset:0x0790, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 137 VA:0x400d68, Offset:0x0798, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ee8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 138 VA:0x400d70, Offset:0x07a0, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ee8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 139 VA:0x400d88, Offset:0x07b8, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 140 VA:0x400d90, Offset:0x07c0, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ee0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 141 VA:0x400d98, Offset:0x07c8, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ee0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 142 VA:0x400db0, Offset:0x07e0, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 143 VA:0x400dbc, Offset:0x07ec, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ee0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 144 VA:0x400dc4, Offset:0x07f4, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ee0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 145 VA:0x400de0, Offset:0x0810, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 146 VA:0x400de8, Offset:0x0818, Reloc:R_AARCH64_CALL26, Target:Unknown-0x400ba8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 147 VA:0x400df0, Offset:0x0820, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ef0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 148 VA:0x400dfc, Offset:0x082c, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Target:Unknown-0x400ef8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 149 VA:0x400e00, Offset:0x0830, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ef0(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+Fixup# 150 VA:0x400e08, Offset:0x0838, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ef8(VALUE), add:0x0000 (@Sec .text) (RAND) (RELOC)1
+
+
+
+>>> Other Fixups: 37
+Fixup#   0 VA:0x4006b4, Offset:0x00e4, Reloc:R_AARCH64_ADR_GOT_PAGE, Base:Unknown-0x4006b4(VALUE), Target:Unknown-0x41ffe0(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   1 VA:0x4006b8, Offset:0x00e8, Reloc:R_AARCH64_LD64_GOT_LO12_NC, Target:Unknown-0x41ffe0(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   2 VA:0x4006c0, Offset:0x00f0, Reloc:R_AARCH64_JUMP26, Base:Unknown-0x4006c0(VALUE), Target:Unknown-0x400588(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   3 VA:0x400538, Offset:0x0008, Reloc:R_AARCH64_CALL26, Base:Unknown-0x400538(VALUE), Target:Unknown-0x4006b4(VALUE), add:0x0000 (@Sec .init) (RELOC)1
+Fixup#   4 VA:0x4006c8, Offset:0x00f8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x4006c8(VALUE), Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   5 VA:0x4006cc, Offset:0x00fc, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   6 VA:0x4006d0, Offset:0x0100, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x4006d0(VALUE), Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   7 VA:0x4006d4, Offset:0x0104, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   8 VA:0x4006e0, Offset:0x0110, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x4006e0(VALUE), Target:Unknown-0x400ec8(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#   9 VA:0x4006e4, Offset:0x0114, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ec8(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  10 VA:0x4006f8, Offset:0x0128, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x4006f8(VALUE), Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  11 VA:0x4006fc, Offset:0x012c, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  12 VA:0x400700, Offset:0x0130, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x400700(VALUE), Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  13 VA:0x400704, Offset:0x0134, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x420048(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  14 VA:0x40071c, Offset:0x014c, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x40071c(VALUE), Target:Unknown-0x400ec8(VALUE), add:0x0008 (@Sec .text) (RELOC)1
+Fixup#  15 VA:0x400720, Offset:0x0150, Reloc:R_AARCH64_LDST64_ABS_LO12_NC, Target:Unknown-0x400ec8(VALUE), add:0x0008 (@Sec .text) (RELOC)1
+Fixup#  16 VA:0x400744, Offset:0x0174, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x400744(VALUE), Target:Unknown-0x420050(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  17 VA:0x400748, Offset:0x0178, Reloc:R_AARCH64_LDST8_ABS_LO12_NC, Target:Unknown-0x420050(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  18 VA:0x400758, Offset:0x0188, Reloc:R_AARCH64_LDST8_ABS_LO12_NC, Target:Unknown-0x420050(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  19 VA:0x400ec8, Offset:0x0008, Reloc:R_AARCH64_ABS64, Target:Unknown-0x0(VALUE), add:0x0000 (@Sec .rodata) (RELOC)1
+Fixup#  20 VA:0x400ed0, Offset:0x0010, Reloc:R_AARCH64_ABS64, Target:Unknown-0x0(VALUE), add:0x0000 (@Sec .rodata) (RELOC)1
+Fixup#  21 VA:0x41fdc8, Offset:0x0000, Reloc:R_AARCH64_ABS64, Target:Unknown-0x4006c8(VALUE), add:0x0070 (@Sec .fini_array) (RELOC)1
+Fixup#  22 VA:0x41fdd0, Offset:0x0000, Reloc:R_AARCH64_ABS64, Target:Unknown-0x4006c8(VALUE), add:0x00a0 (@Sec .init_array) (RELOC)1
+Fixup#  23 VA:0x400688, Offset:0x00b8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x400688(VALUE), Target:Unknown-0x400670(VALUE), add:0x0038 (@Sec .text) (RELOC)1
+Fixup#  24 VA:0x40068c, Offset:0x00bc, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400670(VALUE), add:0x0038 (@Sec .text) (RELOC)1
+Fixup#  25 VA:0x400690, Offset:0x00c0, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x400690(VALUE), Target:Unknown-0x400e20(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  26 VA:0x400694, Offset:0x00c4, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400e20(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  27 VA:0x400698, Offset:0x00c8, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x400698(VALUE), Target:Unknown-0x400ea0(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  28 VA:0x40069c, Offset:0x00cc, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x400ea0(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  29 VA:0x4006a0, Offset:0x00d0, Reloc:R_AARCH64_CALL26, Base:Unknown-0x4006a0(VALUE), Target:Unknown-0x400568(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  30 VA:0x4006a4, Offset:0x00d4, Reloc:R_AARCH64_CALL26, Base:Unknown-0x4006a4(VALUE), Target:Unknown-0x400578(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  31 VA:0x4006a8, Offset:0x00d8, Reloc:R_AARCH64_JUMP26, Base:Unknown-0x4006a8(VALUE), Target:Unknown-0x4005d0(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  32 VA:0x400e2c, Offset:0x085c, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x400e2c(VALUE), Target:Unknown-0x41fdd8(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  33 VA:0x400e30, Offset:0x0860, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x41fdd8(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  34 VA:0x400e38, Offset:0x0868, Reloc:R_AARCH64_ADR_PREL_PG_HI21, Base:Unknown-0x400e38(VALUE), Target:Unknown-0x41fdd0(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  35 VA:0x400e3c, Offset:0x086c, Reloc:R_AARCH64_ADD_ABS_LO12_NC, Target:Unknown-0x41fdd0(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+Fixup#  36 VA:0x400e58, Offset:0x0888, Reloc:R_AARCH64_CALL26, Base:Unknown-0x400e58(VALUE), Target:Unknown-0x400530(VALUE), add:0x0000 (@Sec .text) (RELOC)1
+>>> Total fun num=16 (0/13)
+>>> Total inst num=0
+
+[16, 0, 13, 0]
