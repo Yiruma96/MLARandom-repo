@@ -97,10 +97,10 @@ sudo make -j$(nproc)
 # ./x.py build --stage 1 -j$(nproc)
 # if [ $ARCH = "x86-64" ]
 # then
-#   rm /ccr/myrust67/build/x86_64-unknown-linux-gnu/stage1-std
+#   rm -rf /ccr/myrust67/build/x86_64-unknown-linux-gnu/stage1-std
 #   sudo ld.sh np-x64
 # else
-#   rm /ccr/myrust67/build/aarch64-unknown-linux-gnu/stage1-std
+#   rm -rf /ccr/myrust67/build/aarch64-unknown-linux-gnu/stage1-std
 #   sudo ld.sh np-arm64
 # fi
 # ./x.py build --stage 1 -j$(nproc)
