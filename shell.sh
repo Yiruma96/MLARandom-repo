@@ -113,8 +113,14 @@ sudo make -j$(nproc)
 # source "$HOME/.cargo/env"
 # if [ $ARCH = "x86-64" ]
 # then
+#   rustup toolchain uninstall stable-x86_64-unknown-linux-gnu
+#   rustup install 1.67.0
+#   ln -s /root/.rustup/toolchains/1.67.0-x86_64-unknown-linux-gnu/bin/cargo /ccr/myrust67/build/x86_64-unknown-linux-gnu/stage1/bin/
 #   rustup toolchain link myrust67 /ccr/myrust67/build/x86_64-unknown-linux-gnu/stage1
 # else
+#   rustup toolchain uninstall stable-aarch64-unknown-linux-gnu
+#   rustup install 1.67.0
+#   ln -s /root/.rustup/toolchains/1.67.0-aarch64-unknown-linux-gnu/bin/cargo /ccr/myrust67/build/aarch64-unknown-linux-gnu/stage1/bin/
 #   rustup toolchain link myrust67 /ccr/myrust67/build/aarch64-unknown-linux-gnu/stage1
 # fi
 # rustup default myrust67
